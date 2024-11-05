@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/chosen.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+      <!-- Flatpickr CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+      <!-- Flatpickr JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <title>Hospice - Event</title>
+</head>
+
+
+
+
+<style>
+    .filter-container {
+        text-align: center;
+        /* font-family: Arial, sans-serif; */
+    }
+    #calendar {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .quick-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .filter-btn {
+        background-color: #f0f0f0;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .filter-btn.active, .filter-btn:hover {
+        background-color: #8cd964;
+        color: #fff;
+    }
+    .actions {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    .apply-btn {
+        background-color: #8cd964;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .cancel-btn {
+        background-color: #e0e0e0;
+        color: #555;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+
+
+
+
+    <section class="container-fluid top-bar p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 d-flex gap-5 justify-content-center align-items-center">
+                    <a href="#">info@wwhospice.org</a>
+                    <p>Call Now:<a>(509) 525-5561</a></p>
+                </div>
+                <div class="col-2 d-flex gap-3 justify-content-end socialIcon p-0">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid main-navbar-sec">
+        <div class="container p-0">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><img src="img/Logo.webp" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mt-0 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Hospice Care</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Grief Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Get Involved</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                    <div class="d-flex">
+                        <a class="mainBtn"><button>DONATE</button></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+
+
+    <section class="container-fluid bannerSec">
+        <div class="container">
+            <h1>WALLA WALLA COMMUNITY HOSPICE EVENTS</h1>
+            <p>Upcoming Activities and Opportunities to Support Our Mission</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container-fluid searchSection">
+        <div class="container">
+            <h2>Search Events</h2>
+            <div class="searchInputSec">
+                <div class="colInputSec d-flex align-items-center">
+                    <form>
+                        <select id="mselect" multiple="" style="width: 100%;">
+                            <option>SOLACE</option>
+                            <option>GRIEFADULT</option>
+                            <option>ROCK</option>
+                            <option>HOSPICE</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="searchBtn d-flex justify-content-end gap-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-calendar3"></i></button>
+                    <button><i class="bi bi-geo-alt-fill"></i></button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="filter-container">
+                            <h2>Filter By Date</h2>
+                            <!-- Calendar Input -->
+                            <input id="calendar" placeholder="Select Date" readonly>
+                        
+                            <!-- Quick Filters -->
+                            <div class="quick-filters">
+                                <button class="filter-btn" id="today">Today</button>
+                                <button class="filter-btn" id="tomorrow">Tomorrow</button>
+                                <button class="filter-btn" id="this-week">This Week</button>
+                                <button class="filter-btn" id="next-week">Next Week</button>
+                                <button class="filter-btn" id="this-weekend">This Weekend</button>
+                                <button class="filter-btn" id="next-weekend">Next Weekend</button>
+                                <button class="filter-btn" id="all-dates">All Dates</button>
+                            </div>
+                        
+                            <!-- Action Buttons -->
+                            <div class="actions">
+                                <button class="apply-btn">Apply</button>
+                                <button class="cancel-btn">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchResultSec">
+                <div class="searcTab">
+                    <div class="resultTabMenu">
+                        <ul class="custom-tabs nav-tabs" id="myTab" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                    All Events
+                                </button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                    Upcoming Events
+                                </button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                    Annual Events
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="viewSecBtnSec">
+                        <h4>SELECT VIEW</h4>
+                        <div class="viewBtns">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                            <i class="bi bi-list-task"></i>
+                            <i class="bi bi-map-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="srchResult">
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image5.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="moreResult">
+                        <a class="mainBtn"><button>View more</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="container-fluid footerSection">
+        <div class="container">
+            <div class="topFooterSec d-flex gap-5">
+                <div class="footerCol">
+                    <img src="img/footerLogo.webp">
+                    <p>
+                        Most people say they would choose end-of-life 
+                        care in the comfort of their own home, 
+                        surrounded by friends and family. We honor that 
+                        choice and help make it happen.
+                    </p>
+                    <p>
+                        Hospice care can be initiated in any home setting 
+                        including a nursing home, adult family home, 
+                        group home, or assisted living facility. Wherever 
+                        you are at home—we’ll be there.
+                    </p>
+
+                    <div class="footerSocialIcon">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </div>
+                <div class="footerCol">
+                    <h5>Contact Hospice in Walla Walla</h5>
+                    <p>Serving Walla Walla and Columbia counties and NE Umatilla County.</p>
+                    <div class="addressList">
+                        <p><i class="bi bi-cursor-fill"></i>1067 Isaacs Ave Walla Walla, WA 99362</p>
+                        <p><i class="bi bi-envelope-fill"></i>info@wwhospice.org</p>
+                        <p><i class="bi bi-telephone-fill"></i>(509) 525-5561</p>
+                    </div>
+                </div>
+
+                <div class="footerCol ftrCol">
+                    <div class="footerListMenu">
+                        <h5>Hospice Care</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">About Us</a>
+                            <a href="#" class="Ftlist">Hospice Services</a>
+                            <a href="#" class="Ftlist">Resources</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Calendar</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Upcoming</a>
+                            <a href="#" class="Ftlist">Annual Events</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Grief Support</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Support Groups</a>
+                            <a href="#" class="Ftlist">Events</a>
+                            <a href="#" class="Ftlist">Terms of Use</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Get Involved</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Careers</a>
+                            <a href="#" class="Ftlist">Volunteer</a>
+                            <a href="#" class="Ftlist">Donate</a>
+                            <a href="#" class="Ftlist">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="botFooterSec">
+                <p>© 2024 Walla Walla Community Hospice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initialize Flatpickr on the #calendar input
+        $("#calendar").flatpickr({
+            inline: true,
+            dateFormat: "Y-m-d",
+            defaultDate: "today",
+        });
+    
+        // Handle Quick Filter Buttons
+        $('.filter-btn').on('click', function() {
+            $('.filter-btn').removeClass('active');
+            $(this).addClass('active');
+    
+            let selectedDate;
+            const today = new Date();
+    
+            switch (this.id) {
+                case 'today':
+                    selectedDate = today;
+                    break;
+                case 'tomorrow':
+                    selectedDate = new Date(today.setDate(today.getDate() + 1));
+                    break;
+                case 'this-week':
+                    // Set date to the start of the week
+                    selectedDate = new Date(today.setDate(today.getDate() - today.getDay()));
+                    break;
+                case 'next-week':
+                    // Set date to the start of next week
+                    selectedDate = new Date(today.setDate(today.getDate() + 7 - today.getDay()));
+                    break;
+                case 'this-weekend':
+                    // Set date to next Saturday
+                    selectedDate = new Date(today.setDate(today.getDate() + (6 - today.getDay())));
+                    break;
+                case 'next-weekend':
+                    // Set date to the next Saturday after this week
+                    selectedDate = new Date(today.setDate(today.getDate() + 7 + (6 - today.getDay())));
+                    break;
+                case 'all-dates':
+                    selectedDate = null;
+                    break;
+            }
+    
+            if (selectedDate) {
+                $("#calendar").flatpickr().setDate(selectedDate);
+            } else {
+                $("#calendar").flatpickr().clear();
+            }
+        });
+    });
+</script>
+
+
+</html>
