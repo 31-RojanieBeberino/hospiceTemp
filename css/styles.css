@@ -34,12 +34,15 @@ body{
 .fixedDonatBtn{
     background-color: #87C770;
     position: fixed;
-    bottom: 300px;
+    bottom: 200px;
     right:0;
     border-radius: 50px 0px 0px 50px;
     padding:15px 25px;
     z-index: 99;
     width: 200px;
+    transition: .4s;
+    transform: translateX(125px);
+    text-decoration: none;
 }
 
 .fixedDonatBtn img{
@@ -53,6 +56,11 @@ body{
     font-size: 20px;
     font-weight: 800;
     color:#fff;
+    text-align: center;
+}
+
+.fixedDonatBtn:hover {
+    transform: translateX(0px);
 }
 
 
@@ -311,6 +319,12 @@ a button{
     font-size: 20px;
 }
 
+.viewBtns button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 .viewBtns{
     display: flex;
     gap:10px;
@@ -494,6 +508,12 @@ a button{
     height: 300px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.sideBarIcon button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -719,14 +739,45 @@ a button{
     border-spacing: 10px;
     border-collapse: separate;
     width: 100%;
+    background-color: #464646;
+    padding: 0px 15px;
+    background-color: #464646;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.table-condensed .day{
+
+
+.table-condensed th:hover{
+    background-color: #000!important;
+}
+
+.table-condensed .day,
+ .table-condensed .month,
+ .table-condensed .year,
+ .table-condensed .decade,
+ .table-condensed .century
+ {
     color:#fff;
     font-size: 13px;
 }
 
-.table-condensed .day:hover{
+.table-condensed .day.focused,
+ .table-condensed .month.focused,
+ .table-condensed .year.focused,
+ .table-condensed .decade.focused,
+ .table-condensed .century.focused
+ {
+    color:#000;
+    font-size: 13px;
+}
+
+.table-condensed .day:hover,
+.table-condensed .month:hover,
+.table-condensed .year:hover,
+.table-condensed .decade:hover,
+.table-condensed .century:hover
+{
     color:#000;
 }
 
@@ -791,6 +842,8 @@ a button{
 .footerSection{
     padding: 50px 20px 0px;
     background-color: #475662;
+    position: relative;
+    overflow: hidden;
 }
 
 
