@@ -27,10 +27,39 @@
 }
 
 
+body{
+    position: relative;
+}
+
+.fixedDonatBtn{
+    background-color: #87C770;
+    position: fixed;
+    bottom: 300px;
+    right:0;
+    border-radius: 50px 0px 0px 50px;
+    padding:15px 25px;
+    z-index: 99;
+    width: 200px;
+}
+
+.fixedDonatBtn img{
+    width: 30%;
+    height: 40px;
+    object-fit: contain;
+}
+
+.fixedDonatBtn p{
+    width: 70%;
+    font-size: 20px;
+    font-weight: 800;
+    color:#fff;
+}
+
+
 
 h1, h2, h3, h4, h5, h6,
 p, a, select, option, button, ol, li, span,
-::placeholder, input{
+::placeholder, input, td, th{
     font-family: 'Filson'!important;
     margin:0!important;
 }
@@ -49,6 +78,15 @@ p, a, select, option, button, ol, li, span,
     z-index: 2;
 }
 
+
+.desktop{
+    display: flex;
+}
+
+
+.mobile{
+    display: none!important;
+}
 
 
 .top-bar{
@@ -85,11 +123,15 @@ a button{
 .mainBtn{
     background-color: #87C770;
     padding:15px;
-    width: 200px;
     text-align: center;
     color:#fff;
     border-radius: 50px;
     text-decoration: none;
+}
+
+
+.donateBtn{
+    width: 200px!important;
 }
 
 
@@ -300,6 +342,232 @@ a button{
     object-fit: cover;
 }
 
+
+
+/* List Card */
+
+.listCards .resultCard{
+    display: flex;
+    width: 49%;
+    gap:30px;
+}
+
+.listCards .topRltCrd{
+    width: 30%;
+}
+
+.listCards .topRltCrd img{
+    width: 100%;
+    height: 150px;
+}
+
+.listCards .cardDetails{
+    width: 70%;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.listCards{
+    display: none;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+/* END List Card */
+
+.rsltMap{
+    display: none;
+}
+
+/* Map Result */
+
+
+
+
+
+/* Inner Event Slider */
+
+.carousel-inner{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,0) 19%, rgba(0,0,0,1) 100%);
+    z-index: 1;
+}
+
+.carousel-indicators{
+    gap:10px;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 100px!important;
+}
+
+.innerContent{
+    width: 70%;
+}
+
+
+.innerContent img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #0000003b;
+}
+
+
+
+.innerContent h2{
+    font-size: 45px;
+    color:#475662;
+    font-weight: 800;
+}
+
+.innerContent h5{
+    font-size: 25px;
+    color:#475662;
+    font-weight:600;
+}
+
+.dateLoctcard{
+    background-color: #F1F1F1;
+    padding:20px;
+    border-radius: 10px;
+}
+
+.dateLoctcard h4{
+    font-size: 20px;
+    font-weight: 600;
+    color:#475662;
+}
+
+.dateLoctcard p {
+    font-size: 13px;
+    color:#000;
+}
+
+.dateLoctcard p i{
+    font-size: 18px;
+    color: #475662;
+}
+
+.contentSec{
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #F1F1F1;
+}
+
+
+.pdfItem{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #F1F1F1;
+}
+
+
+.pdfItem img{
+    width: 30%;
+    height: 60px;
+    object-fit: contain;
+}
+
+.pdfItem p{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#000;
+}
+
+.contentImg img{
+    width: 50%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.sideBarIcon i{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color:#87C770;
+    border: 1px solid #87C770;
+    border-radius: 50px;
+}
+
+.innerSideBar{
+    width: 30%;
+}
+
+
+.innerSideBar h5{
+    font-size: 20px;
+    color:#707070;
+    text-transform: uppercase;
+}
+
+.sb_list_card{
+    padding: 15px;
+    background-color: #F7F7F8;
+    border-radius: 5px;
+}
+
+.listImg{
+    width: 35%;
+}
+
+.listImg span{
+    font-size: 12px;
+}
+
+.listImg h6{
+    font-size: 15px;
+}
+
+.listImg img{
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+}
+
+.listContent{
+    width: 65%;
+}
+
+.listContent h6{
+    font-size: 20px;
+    font-weight: 600;
+    color:#000;
+}
+
+.listContent p{
+    font-size: 15px;
+    font-weight: 400;
+    color:#000;
+}
+
+
+/* END Inenr Event Slider */
+
+
+
+
+/* END Map Result */
+
 .cardDateTag{
     padding: 5px;
     border-radius: 3px;
@@ -369,11 +637,36 @@ a button{
 }
 
 
+
 .moreResult{
     display: flex;
     justify-content: center;
     margin: 50px 0px;
 }
+
+.moreResult .mainBtn{
+    width: 250px!important;
+}
+
+
+.gap_custom{
+    gap:25px;
+}
+
+.upcomingEvenSec{
+    background-color: #F8F8F8;
+}
+
+
+.upcomingEvenSec h2{
+    text-align: center;
+    font-size: 45px;
+    color:#475662;
+    font-weight: 800;
+}
+
+
+
 
 
 /* END Search Section */
@@ -383,6 +676,101 @@ a button{
 
 /* Calendar Modal */
 
+.dateModal .modal-dialog{
+    max-width: 700px!important;
+    border-radius: 15px;
+}
+
+.dateModal .modal-content{
+    padding:35px;
+}
+
+
+.calSection{
+    display: flex;
+    gap:50px;
+}
+
+.calColSec{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datepicker-days{
+    display: flex;
+    justify-content: center;
+    padding: 0px 15px;
+    background-color: #464646;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#datepicker{
+    width: 100%;
+}
+
+.datepicker-inline{
+    width: 100%!important;
+}
+
+.table-condensed{
+    border-spacing: 10px;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.table-condensed .day{
+    color:#fff;
+    font-size: 13px;
+}
+
+.table-condensed .day:hover{
+    color:#000;
+}
+
+.table-condensed th{
+    color:#fff;
+    font-size: 15px;
+}
+
+.dateModal h3{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color:#67A8BD;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active,
+.btn:first-child:hover, :not(.btn-check)+.btn:hover{
+    background-color: #87C770!important;
+    color:#fff;
+}
+
+.btn-secondary.selectBtn{
+    background-color: #EEEEEE;
+    color:#000;
+    border: none;
+    padding: 10px 20px;
+}
+
+.selectBtn{
+    padding:10px 20px;
+    color:#fff;
+    border-radius: 50px!important;
+}
+
+.mainBtn{
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+}
+
+.mainBtn.cancelBtn{
+    background-color: #EEEEEE;
+    color:#000
+}
 
 
 /* END Calendar Modal */
@@ -393,6 +781,11 @@ a button{
 
 
 /* Footer Section */
+
+
+.modile{
+    display: none;
+}
 
 
 .footerSection{

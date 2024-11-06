@@ -6,77 +6,22 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="js/chosen.min.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
-      <!-- Flatpickr CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
-      <!-- Flatpickr JavaScript -->
-      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <title>Hospice - Event</title>
 </head>
 
 
 
 
-<style>
-    .filter-container {
-        text-align: center;
-        /* font-family: Arial, sans-serif; */
-    }
-    #calendar {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        text-align: center;
-        margin-top: 10px;
-    }
-    .quick-filters {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-    .filter-btn {
-        background-color: #f0f0f0;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 20px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .filter-btn.active, .filter-btn:hover {
-        background-color: #8cd964;
-        color: #fff;
-    }
-    .actions {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-    }
-    .apply-btn {
-        background-color: #8cd964;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-    .cancel-btn {
-        background-color: #e0e0e0;
-        color: #555;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-</style>
-
 <body>
 
-
-
+    <div class="fixedDonatBtn d-flex align-items-center gap-2">
+        <img src="img/Icon awesome-hand-holding-heart.png">
+        <p>DONATE</p>
+    </div>
 
     <section class="container-fluid top-bar p-2">
         <div class="container">
@@ -134,7 +79,7 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form> -->
                     <div class="d-flex">
-                        <a class="mainBtn"><button>DONATE</button></a>
+                        <a class="mainBtn donateBtn"><button>DONATE</button></a>
                     </div>
                 </div>
             </nav>
@@ -145,7 +90,7 @@
 
 
     <section class="container-fluid bannerSec">
-        <div class="container">
+        <div class="container d-flex flex-column gap-2">
             <h1>WALLA WALLA COMMUNITY HOSPICE EVENTS</h1>
             <p>Upcoming Activities and Opportunities to Support Our Mission</p>
         </div>
@@ -157,7 +102,7 @@
 
 
     <section class="container-fluid searchSection">
-        <div class="container">
+        <div class="container d-flex flex-column gap-2">
             <h2>Search Events</h2>
             <div class="searchInputSec">
                 <div class="colInputSec d-flex align-items-center">
@@ -170,37 +115,114 @@
                         </select>
                     </form>
                 </div>
-                <div class="searchBtn d-flex justify-content-end gap-3">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-calendar3"></i></button>
-                    <button><i class="bi bi-geo-alt-fill"></i></button>
+                <div class="searchBtn d-flex justify-content-end gap-1 gap-lg-3 align-items-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dateModal"><i class="bi bi-calendar3"></i></button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#locationModal"><i class="bi bi-geo-alt-fill"></i></button>
                 </div>
             </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade dateModal" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="filter-container">
-                            <h2>Filter By Date</h2>
-                            <!-- Calendar Input -->
-                            <input id="calendar" placeholder="Select Date" readonly>
-                        
-                            <!-- Quick Filters -->
-                            <div class="quick-filters">
-                                <button class="filter-btn" id="today">Today</button>
-                                <button class="filter-btn" id="tomorrow">Tomorrow</button>
-                                <button class="filter-btn" id="this-week">This Week</button>
-                                <button class="filter-btn" id="next-week">Next Week</button>
-                                <button class="filter-btn" id="this-weekend">This Weekend</button>
-                                <button class="filter-btn" id="next-weekend">Next Weekend</button>
-                                <button class="filter-btn" id="all-dates">All Dates</button>
+                        <form class="d-flex flex-column gap-3 gap-lg-5">
+                            <h3>Filter By Date</h3>
+                            <div class="calSection">
+                                <div class="calColSec">
+                                    <div id="datepicker" data-date="12/24/2024"></div>
+                                    <input type="hidden" id="my_hidden_input">
+                                </div>
+                                <div class="calColSec">
+                                    <div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Button group with radio toggle">
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check1" autocomplete="off" checked>
+                                            <label class="btn btn-secondary selectBtn" for="check1">Today</label>
+                                        </div>
+                                    
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check2" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check2">Tommorrow</label>
+                                        </div>
+                                    
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check3" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check3">This week</label>
+                                        </div>
+
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check4" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check4">Next week</label>
+                                        </div>
+
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check5" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check5">This weekend</label>
+                                        </div>
+
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check6" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check6">Next weekend</label>
+                                        </div>
+
+                                        <div class="dayBtn">
+                                            <input type="radio" class="btn-check" name="options" id="check7" autocomplete="off">
+                                            <label class="btn btn-secondary selectBtn" for="check7">All Dates</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        
-                            <!-- Action Buttons -->
-                            <div class="actions">
-                                <button class="apply-btn">Apply</button>
-                                <button class="cancel-btn">Cancel</button>
+                            <div class="modalBtnSec d-flex gap-4">
+                                <button class="applyBtn mainBtn">Apply</button>
+                                <button class="cancelBtn mainBtn">Cancel</button>
                             </div>
-                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade dateModal" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form class="d-flex flex-column gap-3 gap-lg-5">
+                            <h3>Filter By Location</h3>
+                            <div class="calSection">
+                                <div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Button group with radio toggle">
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check1" autocomplete="off" checked>
+                                        <label class="btn btn-secondary selectBtn" for="check1">Marcus Whitman Hotel & Conference Center</label>
+                                    </div>
+                                
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check2" autocomplete="off">
+                                        <label class="btn btn-secondary selectBtn" for="check2">Walla Walla</label>
+                                    </div>
+                                
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check3" autocomplete="off">
+                                        <label class="btn btn-secondary selectBtn" for="check3">Walla Walla Community Hospice</label>
+                                    </div>
+
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check4" autocomplete="off">
+                                        <label class="btn btn-secondary selectBtn" for="check4">Walla Walla Community Hospice Filipi Room</label>
+                                    </div>
+
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check5" autocomplete="off">
+                                        <label class="btn btn-secondary selectBtn" for="check5">TBA</label>
+                                    </div>
+
+                                    <div class="dayBtn">
+                                        <input type="radio" class="btn-check" name="options" id="check6" autocomplete="off">
+                                        <label class="btn btn-secondary selectBtn" for="check6">Marcus Whitman Hotel & Conference Center</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modalBtnSec d-flex gap-4">
+                                <button class="applyBtn mainBtn">Apply</button>
+                                <button class="cancelBtn mainBtn">Cancel</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -229,9 +251,9 @@
                     <div class="viewSecBtnSec">
                         <h4>SELECT VIEW</h4>
                         <div class="viewBtns">
-                            <i class="bi bi-grid-3x3-gap-fill"></i>
-                            <i class="bi bi-list-task"></i>
-                            <i class="bi bi-map-fill"></i>
+                            <i class="bi bi-grid-3x3-gap-fill" id="grdCard"></i>
+                            <i class="bi bi-list-task" id="listCard"></i>
+                            <i class="bi bi-map-fill" id="rslt_map"></i>
                         </div>
                     </div>
                 </div>
@@ -330,6 +352,75 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image5.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="grdResult">
@@ -394,6 +485,58 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             <div class="grdResult">
@@ -443,6 +586,59 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
 
@@ -455,10 +651,11 @@
     </section>
 
 
+    
 
     <footer class="container-fluid footerSection">
-        <div class="container">
-            <div class="topFooterSec d-flex gap-5">
+        <div class="container p-0">
+            <div class="topFooterSec d-flex gap-5 flex-lg-row flex-column">
                 <div class="footerCol">
                     <img src="img/footerLogo.webp">
                     <p>
@@ -474,7 +671,7 @@
                         you are at home—we’ll be there.
                     </p>
 
-                    <div class="footerSocialIcon">
+                    <div class="footerSocialIcon desktop">
                         <i class="bi bi-facebook"></i>
                         <i class="bi bi-twitter"></i>
                         <i class="bi bi-instagram"></i>
@@ -524,6 +721,12 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="footerSocialIcon mobile">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
             </div>
             <div class="botFooterSec">
                 <p>© 2024 Walla Walla Community Hospice. All rights reserved.</p>
@@ -541,60 +744,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 <script src="js/chosen.jquery.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        // Initialize Flatpickr on the #calendar input
-        $("#calendar").flatpickr({
-            inline: true,
-            dateFormat: "Y-m-d",
-            defaultDate: "today",
-        });
-    
-        // Handle Quick Filter Buttons
-        $('.filter-btn').on('click', function() {
-            $('.filter-btn').removeClass('active');
-            $(this).addClass('active');
-    
-            let selectedDate;
-            const today = new Date();
-    
-            switch (this.id) {
-                case 'today':
-                    selectedDate = today;
-                    break;
-                case 'tomorrow':
-                    selectedDate = new Date(today.setDate(today.getDate() + 1));
-                    break;
-                case 'this-week':
-                    // Set date to the start of the week
-                    selectedDate = new Date(today.setDate(today.getDate() - today.getDay()));
-                    break;
-                case 'next-week':
-                    // Set date to the start of next week
-                    selectedDate = new Date(today.setDate(today.getDate() + 7 - today.getDay()));
-                    break;
-                case 'this-weekend':
-                    // Set date to next Saturday
-                    selectedDate = new Date(today.setDate(today.getDate() + (6 - today.getDay())));
-                    break;
-                case 'next-weekend':
-                    // Set date to the next Saturday after this week
-                    selectedDate = new Date(today.setDate(today.getDate() + 7 + (6 - today.getDay())));
-                    break;
-                case 'all-dates':
-                    selectedDate = null;
-                    break;
-            }
-    
-            if (selectedDate) {
-                $("#calendar").flatpickr().setDate(selectedDate);
-            } else {
-                $("#calendar").flatpickr().clear();
-            }
-        });
-    });
-</script>
+
 
 
 </html>
