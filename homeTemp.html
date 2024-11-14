@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/chosen.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <title>Hospice - Event</title>
+</head>
+
+
+
+
+<body>
+
+
+    <section class="container-fluid top-bar p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 d-flex gap-5 justify-content-center align-items-center">
+                    <a href="#">info@wwhospice.org</a>
+                    <p>Call Now:<a>(509) 525-5561</a></p>
+                </div>
+                <div class="col-2 d-flex gap-3 justify-content-end socialIcon p-0">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid main-navbar-sec">
+        <div class="container p-0">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><img src="img/Logo.webp" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mt-0 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Hospice Care</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Grief Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Get Involved</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                    <div class="d-flex">
+                        <a class="mainBtn donateBtn"><button>DONATE</button></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container-fluid p-0">
+        <div class="homebanner">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image:url('img/banner.webp');">
+                        <div class="sliderContent">
+                            <div class="bannerSlideContent">
+                                <h2>When there isn't a cure, there's the miracle of care</h2>
+                                <p>We believe in living your best life at every stage.</p>
+                                <a href="#" class="mainBtn contactUs"><button>Contact Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image:url('img/newImg72.webp');">
+                        <div class="sliderContent">
+                            <div class="bannerSlideContent">
+                                <h2>When there isn't a cure, there's the miracle of care</h2>
+                                <p>We believe in living your best life at every stage.</p>
+                                <a href="#" class="mainBtn contactUs"><button>Contact Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image:url('img/newImg73.webp');">
+                        <div class="sliderContent">
+                            <div class="bannerSlideContent">
+                                <h2>When there isn't a cure, there's the miracle of care</h2>
+                                <p>We believe in living your best life at every stage.</p>
+                                <a href="#" class="mainBtn contactUs"><button>Contact Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image:url('img/NewTree-of-Life.webp');">
+                        <div class="sliderContent">
+                            <div class="bannerSlideContent">
+                                <h2>When there isn't a cure, there's the miracle of care</h2>
+                                <p>We believe in living your best life at every stage.</p>
+                                <a href="#" class="mainBtn contactUs"><button>Contact Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container d-flex flex-column align-items-center gap-4 contentPara">
+            <i class="bi bi-quote"></i>
+            <p class="secCont">Hospice care is a highly specialized form of care designed to help anyone with a life-limiting illness make the most of their final months. It combines pain and symptom management with emotional and spiritual support to help patients live the remainder of their lives in comfort and dignity, surrounded by those they love.</p>
+        </div>
+    </section>
+
+
+
+
+    <section class="container-fluid p-5 ps-2 pe-2" >
+        <div class="container d-flex gap-5 flex-lg-row flex-column">
+            <div class="secContent d-flex flex-column gap-3 align-items-start justify-content-center">
+                <h2>About Us</h2>
+                <p>Walla Walla Community Hospice is an independent, not-for-profit organization established in 1980. We provide end-of-life comfort care, family support, and grief and bereavement support in the communities we serve.</p>
+                <a href="#" class="mainBtn contactUs"><button>Contact Now</button></a>
+            </div>
+            <div class="secContent">
+                <img src="img/imagenew.jpg">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container d-flex gap-3 gap-lg-4 flex-lg-row flex-column">
+            <div class="ourWayCard" style="background-image:url('img/newImg7.webp');">
+                <div class="cardContent">
+                    <h2>Our Mission</h2>
+                    <p>The mission of Walla Walla Community Hospice is to provide compassionate care to patients in the final stages of life and support for their loved ones and caregivers..</p>
+                </div>
+            </div>
+            <div class="ourWayCard" style="background-image:url('img/newImg8.webp');">
+                <div class="cardContent">
+                    <h2>Our Team</h2>
+                    <p>Walla Walla Hospice offers compassionate end-of-life care, creating a warm environment for patients and loved ones to find solace and support during this challenging journey.</p>
+                </div>
+            </div>
+            <div class="ourWayCard" style="background-image:url('img/newImg9.webp');">
+                <div class="cardContent">
+                    <h2>Grief Support</h2>
+                    <p>Our experienced team offers compassionate companionship through grief, honoring your spirit in silence or through shared stories. We're here to walk this journey with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container servicesSec d-flex flex-column gap-3">
+            <h2>Our Services </h2>
+            <p>Hospice provides a comprehensive team approach to caring for patients and families during the entire final stage of an illness, not just the very end. From the moment someone learns of an incurable condition, hospice can begin offering a full range of support services to meet all of their needs throughout this difficult time.</p>
+            <div class="d-flex gap-3 gap-lg-5 flex-lg-row flex-column">
+                <div class="secContent">
+                    <img src="img/imagenew1.jpg">
+                </div>
+                <div class="secContent">
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Coordination of care with patient's primary physician</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Regularly scheduled RN visits</li>
+                        <li><i class="bi bi-check-circle-fill"></i>On-call RN nights and weekends</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Hospice Aide assistance</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Social work support</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Spiritual support</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Volunteer support</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Bereavement support</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Respite care</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Durable medical equipment</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Provision of personal care supplies</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Provision of medications relating to the terminal prognosis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container">
+            <div class="eligibleSec" style="background-image: url('img/image6.webp');">
+                <div class="eligible_innerSec d-flex">
+                    <div class="secContent d-flex flex-column gap-4 p-lg-5 p-3 align-items-start justify-content-center">
+                        <h4>Patients of any age and with any terminal illness are eligible.</h4>
+                        <a href="#" class="mainBtn contactUs"><button>Give Us A Call </button></a>
+                    </div>
+                    <div class="secContent eligibleSecImg">
+                        <img src="img/newImg1.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container d-flex flex-column gap-4">
+            <div class="d-flex gap-4 flex-lg-row flex-column">
+                <div class="servCard imgSec">
+                    <img src="img/newImg5.webp">
+                </div>
+                <div class="servCard contentPar">
+                    <h4>Clinical Care Services</h4>
+                    <div class="d-flex gap-3 align-items-start">
+                        <i class="bi bi-check-circle-fill"></i><p>Hospice provides comprehensive clinical care services, including coordinated care with the patient's doctor, regular nursing visits, on-call nursing support, and hospice aide help. They also ensure patients receive necessary medications related to their terminal condition.Learn more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-4 flex-lg-row flex-column">
+                <div class="servCard imgSec">
+                    <img src="img/newImg6.webp">
+                </div>
+                <div class="servCard contentPar">
+                    <h4>Supportive Services</h4>
+                    <div class="d-flex gap-3 align-items-start">
+                        <i class="bi bi-check-circle-fill"></i><p>Hospice offers a range of emotional and spiritual support services, including social work, spiritual counseling, volunteer assistance, and bereavement care to help patients and families cope during this difficult time. Learn more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-4 flex-lg-row flex-column">
+                <div class="servCard imgSec">
+                    <img src="img/newImg7.webp">
+                </div>
+                <div class="servCard contentPar">
+                    <h4>Supplemental Care And Resources</h4>
+                    <div class="d-flex gap-3 align-items-start">
+                        <i class="bi bi-check-circle-fill"></i><p>In addition to clinical and support services, hospice also provides practical assistance such as respite care, the loan of medical equipment, and supplies for the patient's personal care needs. Learn more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container">
+            <div class="eligibleSec" style="background-image: url('img/image6.webp');">
+                <div class="eligible_innerSec d-flex flex-lg-row flex-column-reverse">
+                    <div class="secContent eligibleSecImg testimonial">
+                        <img src="img/newImg11.webp">
+                    </div>
+                    <div class="secContent d-flex flex-column gap-4 p-lg-5 p-3 align-items-start justify-content-center">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active ">
+                                    <h3>Testimonials </h3><br>
+                                    <p>“Hospice staff are beyond friendly carrying and know what to do to help your loved one getting close to passing away with love. And help you through this tough heartbreaking time in your and families life.” </p><br>
+                                    <p>- Liza M.</p>
+                                </div>
+                                <div class="carousel-item ">
+                                    <h3>Testimonials </h3><br>
+                                    <p>“Hospice staff are beyond friendly carrying and know what to do to help your loved one getting close to passing away with love. And help you through this tough heartbreaking time in your and families life.” </p><br>
+                                    <p>- Liza M.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h3>Testimonials </h3><br>
+                                    <p>“Hospice staff are beyond friendly carrying and know what to do to help your loved one getting close to passing away with love. And help you through this tough heartbreaking time in your and families life.” </p><br>
+                                    <p>- Liza M.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid p-5 ps-2 pe-2" >
+        <div class="container d-flex gap-5 flex-lg-row flex-column">
+            <div class="secContent d-flex flex-column gap-3 align-items-start justify-content-center">
+                <h2>When There Isn't A Cure, There's The Miracle Of Care.</h2>
+                <p>Serving Walla Walla and Columbia counties and NE Umatilla County.</p>
+                <a href="#" class="mainBtn contactUs"><button>Learn more</button></a>
+            </div>
+            <div class="secContent">
+                <img src="img/image24.webp">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid">
+        <div class="container eventSec">
+            <h3>EVENTS Calendar</h3>
+            <div class="searchResultSec">
+                <div class="searcTab">
+                    <div class="resultTabMenu">
+                        <ul class="custom-tabs nav-tabs" id="myTab" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                    All Events
+                                </button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                    Upcoming Events
+                                </button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                    Annual Events
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="viewSecBtnSec">
+                        <h4>SELECT VIEW</h4>
+                        <div class="viewBtns">
+                            <button><i class="bi bi-grid-3x3-gap-fill" id="grdCard"></i></button>
+                            <button><i class="bi bi-list-task" id="listCard"></i></button>
+                            <button><i class="bi bi-map-fill" id="rslt_map"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="srchResult">
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image5.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image5.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="grdResult">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image2.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listCards">
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image4.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image3.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                                <div class="resultCard">
+                                    <div class="topRltCrd">
+                                        <img src="img/image1.webp">
+                                        <div class="cardDateTag">
+                                            <span>TUESDAY</span>
+                                            <h5>MAY</h5>
+                                            <p>28</p>
+                                        </div>
+                                    </div>
+                                    <div class="cardDetails">
+                                        <h4>SOLACE</h4>
+                                        <p><i class="bi bi-clock-fill"></i>11:30 AM-12:30 PM </p>
+                                        <p><i class="bi bi-geo-alt-fill"></i>Walla Walla Community Hospice Filipi Room </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rsltMap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.863322975516!2d-118.32659082336734!3d46.07376639256117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a26a8e04d02961%3A0x31a56434397ce3ca!2sWalla%20Walla%20Community%20Hospice!5e0!3m2!1sen!2sph!4v1730873202813!5m2!1sen!2sph" width="100%" height="550" style="border:0; border-radius: 20px; box-shadow: 0px 0px 5px #00000046;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="moreResult">
+                        <a class="mainBtn"><button>View more</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2 volunteerSec">
+        <div class="container d-flex flex-column gap-4 justify-content-center">
+            <h3>Volunteer</h3>
+            <div class="volunteerImgSec">
+                <img src="img/newImg8.webp">
+                <img src="img/newImg9.webp">
+                <img src="img/newImg10.webp">
+                <img src="img/newImg4.webp">
+                <img src="img/image.webp">
+                <img src="img/newImg6.webp">
+                <img src="img/image5.webp">
+            </div>
+            <div class="d-flex gap-lg-3 gap-3 flex-lg-row flex-column">
+                <div class="secContent whiteBg d-flex flex-column gap-3 align-items-start justify-content-center p-3 p-lg-5">
+                    <p>As a volunteer for Walla Walla Community Hospice, whether you are working directly with patients, in the office, or during an event, YOU ARE AN ESSENTIAL PART OF THE TEAM which allows us to offer quality, compassionate care to our patients and support for their caregivers or loved ones. </p>
+                    <p>If you would like to volunteer, please fill out our general volunteer application form by clicking on the button below or contact Luke at luke@wwhospice.org(?) to determine what opportunities best suit your interests, abilities and availability. </p>
+                    <p>Is volunteering right for me?</p>
+                </div>
+                <div class="secContent d-flex flex-column gap-3 align-items-start justify-content-center">
+                    <p>One of the most valuable skills our volunteers possess is compassion. Here are some things to consider before you apply:</p>
+                    
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Can I make a commitment to be there for others?</li>
+                        <li><i class="bi bi-check-circle-fill"></i>How much time can I reasonably give?</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Where will my strengths be put to best use?</li>
+                    </ul>
+
+                    <p>
+                        Who can volunteer?<br>
+                        Volunteers come from all walks of life – they are business professionals, retirees or students. Whether you can volunteer for two hours a day or two hours a week, we welcome  you to our team.
+                    </p>
+
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Anyone over 18 years old can apply to volunteer.</li>
+                        <li><i class="bi bi-check-circle-fill"></i>No experience is necessary to volunteer. Volunteers receive training prior to starting any volunteer duties.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2">
+        <div class="container bottomSec">
+            <div class="eligibleSec" style="background-image: url('img/image6.webp');">
+                <div class="eligible_innerSec d-flex flex-lg-row flex-column">
+                    <div class="secContent d-flex flex-column gap-4 p-4 p-lg-5 align-items-start justify-content-center">
+                        <h3>Donate Today</h3>
+                        <h4>Your Generosity Provides Comfort and Care </h4>
+                        <a href="#" class="mainBtn contactUs"><button>Donate Today</button></a>
+                    </div>
+                    <div class="secContent eligibleSecImg">
+                        <img src="img/newImg2.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid p-5 pe-2 ps-2 bttmbar">
+        <div class="container d-flex gap-4 align-items-center flex-lg-row flex-column">
+            <h3>
+                We Provide Care, Guidance, and Support for Individuals 
+                Experiencing Life-Limiting Illness, and for their Loved Ones.
+            </h3>
+            <a href="#" class="mainBtn contactUs"><button>Donate Today</button></a>
+        </div>
+    </section>
+
+
+
+
+      
+
+    <footer class="container-fluid footerSection">
+        <a href="https://gcld.co/3ZwkR8Z" class="fixedDonatBtn d-flex align-items-center gap-2">
+            <img src="img/Icon awesome-hand-holding-heart.png">
+            <p>DONATE</p>
+        </a>
+        <div class="container p-0">
+            <div class="topFooterSec d-flex gap-5 flex-lg-row flex-column">
+                <div class="footerCol">
+                    <img src="img/footerLogo.webp">
+                    <p>
+                        Most people say they would choose end-of-life 
+                        care in the comfort of their own home, 
+                        surrounded by friends and family. We honor that 
+                        choice and help make it happen.
+                    </p>
+                    <p>
+                        Hospice care can be initiated in any home setting 
+                        including a nursing home, adult family home, 
+                        group home, or assisted living facility. Wherever 
+                        you are at home—we’ll be there.
+                    </p>
+
+                    <div class="footerSocialIcon desktop">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </div>
+                <div class="footerCol">
+                    <h5>Contact Hospice in Walla Walla</h5>
+                    <p>Serving Walla Walla and Columbia counties and NE Umatilla County.</p>
+                    <div class="addressList">
+                        <p><i class="bi bi-cursor-fill"></i>1067 Isaacs Ave Walla Walla, WA 99362</p>
+                        <p><i class="bi bi-envelope-fill"></i>info@wwhospice.org</p>
+                        <p><i class="bi bi-telephone-fill"></i>(509) 525-5561</p>
+                    </div>
+                </div>
+
+                <div class="footerCol ftrCol">
+                    <div class="footerListMenu">
+                        <h5>Hospice Care</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">About Us</a>
+                            <a href="#" class="Ftlist">Hospice Services</a>
+                            <a href="#" class="Ftlist">Resources</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Calendar</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Upcoming</a>
+                            <a href="#" class="Ftlist">Annual Events</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Grief Support</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Support Groups</a>
+                            <a href="#" class="Ftlist">Events</a>
+                            <a href="#" class="Ftlist">Terms of Use</a>
+                        </div>
+                    </div>
+                    <div class="footerListMenu">
+                        <h5>Get Involved</h5>
+                        <div class="menuList">
+                            <a href="#" class="Ftlist">Careers</a>
+                            <a href="#" class="Ftlist">Volunteer</a>
+                            <a href="#" class="Ftlist">Donate</a>
+                            <a href="#" class="Ftlist">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerSocialIcon mobile">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="botFooterSec">
+                <p>© 2024 Walla Walla Community Hospice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+
+</html>

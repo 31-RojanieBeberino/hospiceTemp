@@ -165,5 +165,82 @@
 
 
     
+    .cardContent h2{
+        font-size: 25px;
+    }
 
+    .cardContent{
+        padding: 15px;
+    }
+
+
+    .secContent.eligibleSecImg img{
+        height: 250px;
+    }
+
+    .secContent h4{
+        font-size: 25px;
+    }
+
+    .servCard.contentPar{
+        padding:20px;
+    }
+
+    .servCard.contentPar p {
+        font-size: 14px;
+    }
+
+    .servCard h4{
+        font-size: 20px;
+    }
+
+    .eligibleSec .secContent.eligibleSecImg.testimonial img{
+        height: 300px;
+    }
+
+    .volunteerImgSec img{
+        width:35%;
+    }
+
+
+    .bttmbar h3{
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width:500px){
+    .bannerSlideContent h2{
+        font-size:35px;
+    }
+
+    .secContent img{
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .ourWayCard{
+        height: 300px;
+    }
+
+    .cardContent h2{
+        font-size: 30px;
+    }
+
+    .imgSec, .servCard.contentPar{
+        width: 100%;
+    }
+
+    .eventSec h3{
+        text-align: center;
+    }
+
+    .volunteerImgSec img{
+        width: 100%;
+        height: 250px;
+    }
 }
