@@ -86,6 +86,14 @@ p, a, select, option, button, ol, li, span,
     z-index: 2;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+}
+.nav-item.dropdown:hover .nav-link {
+    text-decoration: none;
+}
+
 
 .desktop{
     display: flex;
@@ -968,6 +976,12 @@ a button{
     font-weight: 400;
     line-break: 1.2em;
 }
+
+.donateBtn{
+    /* transition: .4s; */
+}
+
+
 
 .secContent ul{
     padding: 0px;
