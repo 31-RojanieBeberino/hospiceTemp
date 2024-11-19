@@ -73,8 +73,14 @@ p, a, select, option, button, ol, li, span,
 }
 
 
+.socialIcon{
+    position: absolute;
+    left: 0;
+}
+
 .socialIcon i{
     color:#fff;
+    font-size: 13px;
 }
 
 
@@ -107,8 +113,13 @@ p, a, select, option, button, ol, li, span,
 
 .top-bar{
     background-color: #475662;
-    position: relative;
     z-index: 4;
+    padding:15px 20px;
+}
+
+
+.top-bar .top-bar_inner{
+    position: relative;
 }
 
 
