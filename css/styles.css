@@ -864,7 +864,7 @@ a button{
     padding:20px 20px;
     position: relative;
     overflow: hidden;
-    height:350px;
+    height:400px;
 }
 
 
@@ -887,6 +887,7 @@ a button{
     justify-content: center;
     position: relative;
     z-index: 1;
+    height: 400px;
 }
 
 .bannerSlideContent{
