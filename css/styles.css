@@ -867,6 +867,19 @@ a button{
     height:400px;
 }
 
+.homebanner .carousel-item {
+    transition: transform 1s ease-in-out; /* Smooth transition effect */
+}
+
+.homebanner .carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.homebanner .carousel-fade .carousel-item.active {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
 
 .overLine{
     position: absolute;
