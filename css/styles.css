@@ -248,7 +248,7 @@ a button{
 .searchSection h2{
     font-size: 40px;
     font-weight: 600;
-    color:#000;
+    color:#475662;
 }
 
 .searchBtn button{
@@ -487,7 +487,7 @@ a button{
 
 .dateLoctcard p {
     font-size: 13px;
-    color:#000;
+    color:#475662;
 }
 
 .dateLoctcard p i{
@@ -519,7 +519,7 @@ a button{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
-    color:#000;
+    color:#475662;
 }
 
 .contentImg img{
@@ -590,13 +590,13 @@ a button{
 .listContent h6{
     font-size: 20px;
     font-weight: 600;
-    color:#000;
+    color:#475662;
 }
 
 .listContent p{
     font-size: 15px;
     font-weight: 400;
-    color:#000;
+    color:#475662;
 }
 
 
@@ -787,7 +787,7 @@ a button{
  .table-condensed .decade.focused,
  .table-condensed .century.focused
  {
-    color:#000;
+    color:#475662;
     font-size: 13px;
 }
 
@@ -797,7 +797,7 @@ a button{
 .table-condensed .decade:hover,
 .table-condensed .century:hover
 {
-    color:#000;
+    color:#475662;
 }
 
 .table-condensed th{
@@ -931,7 +931,7 @@ a button{
 
 .bannerSlideContent h2{
     font-size:55px;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     color:#fff;
     text-align: center;
@@ -977,6 +977,22 @@ a button{
     height: 350px;
 }
 
+
+.secContent p{
+    font-size: 17px;
+    color:#475662;
+}
+
+
+.secContent .secBtn{
+    text-decoration: none;
+    background-color: #495057;
+    color:#fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 5px;
+}
 
 .ourWayCard{
     background-position: center center;
@@ -1040,10 +1056,11 @@ a button{
 
 .secContent ul li i{
     color:#87C770;
+    font-size: 20px;
 }
 
 .secContent ul li {
-    color:#000;
+    color:#475662;
 }
 
 
@@ -1056,7 +1073,7 @@ a button{
 
 .servicesSec p {
     text-align: center;
-    color:#000;
+    color:#475662;
     font-size: 18px;
 }
 
@@ -1106,8 +1123,9 @@ a button{
 
 
 .secContent h4 {
-    font-size: 35px;
+    font-size: 45px;
     color:#fff;
+    line-height: 1em;
 }
 
 
@@ -1120,6 +1138,10 @@ a button{
     flex-direction: column;
     gap:15px;
     justify-content: center;
+}
+
+.servCard.contentPar i, .servCard.contentParp p{
+    color:#475662;
 }
 
 
