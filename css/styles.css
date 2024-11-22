@@ -881,6 +881,22 @@ a button{
     transition: opacity 1s ease-in-out;
 }
 
+
+.homebanner .carousel-indicators button{
+    width:10px!important;
+    height: 10px!important;
+    border-radius: 50px!important;
+    border-top: 0!important;
+    border-bottom: 0!important;
+    margin: 0px!important;
+}
+
+
+.carousel-indicators .active{
+    background-color: #87C770!important;
+}
+
+
 .overLine{
     position: absolute;
     top:0;
