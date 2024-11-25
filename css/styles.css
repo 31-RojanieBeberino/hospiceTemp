@@ -1003,10 +1003,12 @@ a button{
     height: 400px;
     display:flex;
     align-items: flex-end;
+    text-decoration: none;
 }
 
 
 .ourWayCard::before{
+    pointer-events: all;
     content: "";
     position: absolute;
     top:0;
