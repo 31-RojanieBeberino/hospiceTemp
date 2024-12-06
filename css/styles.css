@@ -163,7 +163,7 @@ a button{
 
 
 .bannerSec{
-    background-image: url('../img/NewTree-of-Life.webp');
+    background-image: url('../img/finalTOF.webp');
     background-position: center center;
     background-size: cover;
     padding: 150px 20px;
@@ -191,9 +191,10 @@ a button{
 .bannerSec h1{
     text-align: center;
     font-size: 70px;
-    font-weight: 900;
+    font-weight: 500;
     color:#fff;
     line-height: 1em;
+    text-transform: capitalize;
 }
 
 .bannerSec p{
